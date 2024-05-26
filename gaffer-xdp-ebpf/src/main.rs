@@ -45,13 +45,13 @@ fn hash_responder(ctx: XdpContext) -> Result<u32, ()> {
     let dest_port = u16::from_be(udphdr.dest);
 
     if dest_port != 32001 {
-        info!(
-            &ctx,
-            "IGNORING OTHER: {} from {}:{}",
-            dest_port,
-            source_addr,
-            u16::from_be(udphdr.source),
-        );
+        // info!(
+        //     &ctx,
+        //     "IGNORING OTHER: {} from {}:{}",
+        //     dest_port,
+        //     source_addr,
+        //     u16::from_be(udphdr.source),
+        // );
         return Ok(xdp_action::XDP_PASS);
     }
 
