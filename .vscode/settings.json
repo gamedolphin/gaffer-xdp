@@ -1,0 +1,3 @@
+{
+  "rust-analyzer.linkedProjects": ["Cargo.toml", "gaffer-xdp-ebpf/Cargo.toml"]
+}
